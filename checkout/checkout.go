@@ -27,6 +27,11 @@ func New(pricer PricingService) domain.ICheckout {
 	}
 }
 
+// GetID returns the id for a checkout session
+func (s *session) GetID() string {
+	return s.id
+}
+
 // Scan validates an SKU against the current pricing rules and adds it to the session.
 func (s *session) Scan(SKU string) (err error) {
 	rules := s.pricer.GetRules()

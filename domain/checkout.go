@@ -4,6 +4,7 @@ package domain
 type ICheckout interface {
 	Scan(SKU string) (err error)
 	GetTotalPrice() (totalPrice int, err error)
+	GetID() string
 }
 
 // PricingRule defines the pricing structure for a single SKU.
