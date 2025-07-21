@@ -1,11 +1,9 @@
-Understood. Here is the plain text content that you can copy directly into a file named `api.md`.
-
-````
 # Checkout API Documentation
 
 This document provides details on the available endpoints for the Checkout API.
 
 ## API Server Base URL
+
 `http://localhost:8080`
 
 ---
@@ -14,23 +12,26 @@ This document provides details on the available endpoints for the Checkout API.
 
 Initializes a new, empty checkout session and returns a unique ID for it. This ID must be used in subsequent requests to scan items and get the total price.
 
-*   **Endpoint**: `POST /checkouts`
-*   **Method**: `POST`
+- **Endpoint**: `POST /checkouts`
+- **Method**: `POST`
 
 ### Request Body
+
 No request body is required.
 
 ### Responses
 
 #### ✅ **Success: 201 Created**
+
 Returned when a checkout session is successfully created. The body contains the unique ID for the new session.
 
 **Response Body:**
+
 ```json
 {
   "checkoutId": "a1b2c3d4-e5f6-7890-1234-567890abcdef"
 }
-````
+```
 
 #### ❌ **Error: 500 Internal Server Error**
 
