@@ -11,8 +11,8 @@ type mockPricingService struct{}
 
 func (m *mockPricingService) GetRules() map[string]domain.PricingRule {
 	return map[string]domain.PricingRule{
-		"A": {UnitPrice: 50, SpecialPrice: &domain.SpecialOffer{Quantity: 3, Price: 130}},
-		"B": {UnitPrice: 30, SpecialPrice: &domain.SpecialOffer{Quantity: 2, Price: 45}},
+		"A": {UnitPrice: 50, SpecialPrice: &domain.SpecialPrice{Quantity: 3, Price: 130}},
+		"B": {UnitPrice: 30, SpecialPrice: &domain.SpecialPrice{Quantity: 2, Price: 45}},
 		"C": {UnitPrice: 20, SpecialPrice: nil},
 		"D": {UnitPrice: 15, SpecialPrice: nil},
 	}

@@ -10,11 +10,11 @@ type ICheckout interface {
 // PricingRule defines the pricing structure for a single SKU.
 type PricingRule struct {
 	UnitPrice    int           `json:"unitPrice"`
-	SpecialPrice *SpecialOffer `json:"specialPrice"`
+	SpecialPrice *SpecialPrice `json:"specialPrice"`
 }
 
-// SpecialOffer defines a multi-buy promotion.
-type SpecialOffer struct {
+// SpecialPrice defines a multi-buy promotion.
+type SpecialPrice struct {
 	Quantity int `json:"quantity"`
 	Price    int `json:"price"`
 }
